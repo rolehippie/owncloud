@@ -21,7 +21,7 @@ ExecStart=/usr/bin/docker run --rm \
   --label traefik.http.services.owncloud.loadbalancer.server.port=8080 \
   --label traefik.http.services.owncloud.loadbalancer.server.scheme=http \
   --label traefik.http.services.owncloud.loadbalancer.passhostheader=true \
-  --label traefik.http.routers.owncloud.rule="Host(`{{ owncloud_domain.split(",") | join("`, `") }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix.split(",") | join("`, `") }}`){% endif %}" \
+  --label traefik.http.routers.owncloud.rule="Host(`{{ owncloud_domain }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix }}`){% endif %}" \
   --label traefik.http.routers.owncloud.service=owncloud@docker \
   --label traefik.http.routers.owncloud.entrypoints=https \
   --label traefik.http.routers.owncloud.tls=true \
@@ -29,7 +29,7 @@ ExecStart=/usr/bin/docker run --rm \
   --label traefik.http.routers.owncloud.tls.certresolver={{ owncloud_cert_resolver }} \
 {% endif %}
   --label traefik.http.routers.owncloud.middlewares={{ owncloud_secure_middlewares | join(",") }} \
-  --label traefik.http.routers.owncloud-insecure.rule="Host(`{{ owncloud_domain.split(",") | join("`, `") }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix.split(",") | join("`, `") }}`){% endif %}" \
+  --label traefik.http.routers.owncloud-insecure.rule="Host(`{{ owncloud_domain }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix }}`){% endif %}" \
   --label traefik.http.routers.owncloud-insecure.service=owncloud@docker \
   --label traefik.http.routers.owncloud-insecure.entrypoints=http \
   --label traefik.http.routers.owncloud-insecure.middlewares={{ owncloud_insecure_middlewares | join(",") }} \
