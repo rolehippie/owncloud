@@ -1,0 +1,57 @@
+[Unit]
+Description=ownCloud
+
+Wants=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+RestartSec=10s
+EnvironmentFile=/etc/environment
+
+ExecStop=/bin/sh -c '/usr/bin/docker ps | /bin/grep %p 1> /dev/null && /usr/bin/docker stop %p || true'
+ExecStartPre=/bin/sh -c '/usr/bin/docker ps | /bin/grep %p 1> /dev/null && /usr/bin/docker kill %p || true'
+ExecStartPre=/bin/sh -c '/usr/bin/docker ps -a | /bin/grep %p 1> /dev/null && /usr/bin/docker rm %p || true'
+ExecStartPre=/usr/bin/docker pull {{ owncloud_image }}
+ExecStart=/usr/bin/docker run --rm \
+  --name %p \
+  --hostname %p \
+  --label traefik.enable=true \
+  --label traefik.docker.network={{ owncloud_network }} \
+  --label traefik.http.services.owncloud.loadbalancer.server.port=8080 \
+  --label traefik.http.services.owncloud.loadbalancer.server.scheme=http \
+  --label traefik.http.services.owncloud.loadbalancer.passhostheader=true \
+  --label traefik.http.routers.owncloud.rule="Host(`{{ owncloud_domain.split(",") | join("`, `") }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix.split(",") | join("`, `") }}`){% endif %}" \
+  --label traefik.http.routers.owncloud.service=owncloud@docker \
+  --label traefik.http.routers.owncloud.entrypoints=https \
+  --label traefik.http.routers.owncloud.tls=true \
+{% if owncloud_cert_resolver | default(False) %}
+  --label traefik.http.routers.owncloud.tls.certresolver={{ owncloud_cert_resolver }} \
+{% endif %}
+  --label traefik.http.routers.owncloud.middlewares={{ owncloud_secure_middlewares | join(",") }} \
+  --label traefik.http.routers.owncloud-insecure.rule="Host(`{{ owncloud_domain.split(",") | join("`, `") }}`){% if owncloud_prefix | default(False) %} && PathPrefix(`{{ owncloud_prefix.split(",") | join("`, `") }}`){% endif %}" \
+  --label traefik.http.routers.owncloud-insecure.service=owncloud@docker \
+  --label traefik.http.routers.owncloud-insecure.entrypoints=http \
+  --label traefik.http.routers.owncloud-insecure.middlewares={{ owncloud_insecure_middlewares | join(",") }} \
+  --env-file /etc/default/owncloud \
+{% if owncloud_network | default(False) %}
+  --network {{ owncloud_network }} \
+{% endif %}
+  --volume /etc/ssl:/etc/ssl:ro \
+{% if owncloud_volume_server | default(False) %}
+  --volume {{ owncloud_volume_server }}:/var/lib/owncloud \
+{% endif %}
+{% if owncloud_volume_hooks | default(False) %}
+  --volume {{ owncloud_volume_hooks }}:/etc/owncloud \
+{% endif %}
+{% if owncloud_publish_server | default(False) %}
+  --publish {{ owncloud_publish_server }}:8080 \
+{% endif %}
+  --health-cmd '/usr/bin/healthcheck' \
+  --health-interval 10s \
+  --health-retries 20 \
+  --health-timeout 10s \
+  {{ owncloud_image }}
+
+[Install]
+WantedBy=multi-user.target

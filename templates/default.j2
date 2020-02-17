@@ -1,0 +1,45 @@
+OWNCLOUD_PROTOCOL=https
+OWNCLOUD_DOMAIN={{ owncloud_domain.split(",") | first }}
+{% if owncloud_prefix | default(False) %}
+OWNCLOUD_SUB_URL={{ owncloud_prefix.split(",") | first }}
+{% else %}
+OWNCLOUD_SUB_URL=/
+{% endif %}
+OWNCLOUD_ADMIN_USERNAME={{ owncloud_admin_username }}
+OWNCLOUD_ADMIN_PASSWORD={{ owncloud_admin_password }}
+OWNCLOUD_DB_TYPE={{ owncloud_db_type }}
+OWNCLOUD_DB_HOST={{ owncloud_db_host }}
+OWNCLOUD_DB_USERNAME={{ owncloud_db_username }}
+OWNCLOUD_DB_PASSWORD={{ owncloud_db_password }}
+OWNCLOUD_DB_NAME={{ owncloud_db_name }}
+OWNCLOUD_MYSQL_UTF8MB4={{ owncloud_db_utf8mb4 | lower }}
+OWNCLOUD_APPS_INSTALL={{ owncloud_apps_install | join(",") }}
+OWNCLOUD_APPS_UNINSTALL={{ owncloud_apps_uninstall | join(",") }}
+OWNCLOUD_APPS_ENABLE={{ owncloud_apps_enable | join(",") }}
+OWNCLOUD_APPS_DISABLE={{ owncloud_apps_disable | join(",") }}
+OWNCLOUD_APPS_DEPRECATED={{ owncloud_apps_deprecated | join(",") }}
+OWNCLOUD_LOG_FILE={{ owncloud_log_file }}
+OWNCLOUD_LOG_LEVEL={{ owncloud_log_level }}
+OWNCLOUD_LOG_ROTATE_SIZE={{ owncloud_log_rotate_size }}
+OWNCLOUD_MAIL_SMTP_AUTH={{ owncloud_smtp_auth | lower }}
+OWNCLOUD_MAIL_SMTP_AUTH_TYPE={{ owncloud_smtp_auth_type }}
+OWNCLOUD_MAIL_SMTP_MODE={{ owncloud_smtp_mode }}
+OWNCLOUD_MAIL_SMTP_HOST={{ owncloud_smtp_host }}
+OWNCLOUD_MAIL_SMTP_PORT={{ owncloud_smtp_port }}
+OWNCLOUD_MAIL_SMTP_NAME={{ owncloud_smtp_username }}
+OWNCLOUD_MAIL_SMTP_PASSWORD={{ owncloud_smtp_password }}
+OWNCLOUD_MAIL_SMTP_SECURE={{ owncloud_smtp_secure }}
+OWNCLOUD_MAIL_DOMAIN={{ owncloud_smtp_domain }}
+OWNCLOUD_MAIL_FROM_ADDRESS={{ owncloud_smtp_address }}
+OWNCLOUD_REDIS_ENABLED={{ owncloud_redis_enabled | lower }}
+OWNCLOUD_REDIS_HOST={{ owncloud_redis_host }}
+OWNCLOUD_REDIS_PORT={{ owncloud_redis_port }}
+OWNCLOUD_REDIS_DB={{ owncloud_redis_db }}
+OWNCLOUD_REDIS_PASSWORD={{ owncloud_redis_password }}
+OWNCLOUD_VOLUME_ROOT=/var/lib/owncloud
+OWNCLOUD_PRE_INSTALL_PATH=/etc/owncloud/pre_install.d
+OWNCLOUD_POST_INSTALL_PATH=/etc/owncloud/post_install.d
+OWNCLOUD_PRE_SERVER_PATH=/etc/owncloud/pre_server.d
+OWNCLOUD_POST_SERVER_PATH=/etc/owncloud/post_server.d
+OWNCLOUD_PRE_CRONJOB_PATH=/etc/owncloud/pre_cronjob.d
+OWNCLOUD_POST_CRONJOB_PATH=/etc/owncloud/post_cronjob.d

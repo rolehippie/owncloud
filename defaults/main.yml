@@ -1,0 +1,142 @@
+# Standards: 0.1
+---
+# @var owncloud_image:description: Docker image to use
+owncloud_image: owncloud/server:10.3
+
+# @var owncloud_network:description: Docker network to connect to
+owncloud_network: traefik
+
+# @var owncloud_volume_server:description: Path to server volume
+owncloud_volume_server: /var/lib/owncloud
+
+# @var owncloud_volume_hooks:description: Path to hooks volume
+owncloud_volume_hooks: /etc/owncloud
+
+# @var owncloud_publish_server:description: Publish the service on that binding
+owncloud_publish_server:
+
+# @var owncloud_cert_resolver:description: Cert resolver within traefik
+owncloud_cert_resolver: default
+
+# @var owncloud_secure_middlewares:description: Secure middlewares for traefik
+owncloud_secure_middlewares:
+  - secure@file
+  - errors@file
+
+# @var owncloud_insecure_middlewares:description: Insecure middlewares for traefik
+owncloud_insecure_middlewares:
+  - https@file
+  - errors@file
+
+# @var owncloud_domain:description: Domain used to access ownCloud
+owncloud_domain:
+
+# @var owncloud_prefix:description: Prefix used to access ownCloud
+owncloud_prefix:
+
+# @var owncloud_prefix:description: Username for the admin user
+owncloud_admin_username: admin
+
+# @var owncloud_prefix:description: Password for the admin user
+owncloud_admin_password: admin
+
+# @var owncloud_prefix:description: Database type to use
+owncloud_db_type: mysql
+
+# @var owncloud_prefix:description: Database host
+owncloud_db_host: mariadb:3306
+
+# @var owncloud_prefix:description: Database username
+owncloud_db_username:
+
+# @var owncloud_prefix:description: Database password
+owncloud_db_password:
+
+# @var owncloud_prefix:description: Database name
+owncloud_db_name: owncloud
+
+# @var owncloud_prefix:description: Enable utf8mb4 database
+owncloud_db_utf8mb4: True
+
+# @var owncloud_prefix:description: List of apps to install
+owncloud_apps_install: []
+
+# @var owncloud_prefix:description: List of apps to uninstall
+owncloud_apps_uninstall: []
+
+# @var owncloud_prefix:description: List of apps to enable
+owncloud_apps_enable: []
+
+# @var owncloud_prefix:description: List of apps to disable
+owncloud_apps_disable: []
+
+# @var owncloud_prefix:description: List of deprecated apps
+owncloud_apps_deprecated: []
+
+# @var owncloud_prefix:description: Path to logfile within container
+owncloud_log_file: /dev/stdout
+
+# @var owncloud_prefix:description: Logging level
+owncloud_log_level: '2'
+
+# @var owncloud_prefix:description: Log rotation file size
+owncloud_log_rotate_size: '104857600'
+
+# @var owncloud_prefix:description: Enable SMTP auth
+owncloud_smtp_auth: True
+
+# @var owncloud_prefix:description: Mail auth type
+owncloud_smtp_auth_type: LOGIN
+
+# @var owncloud_prefix:description: Mail sending mode
+owncloud_smtp_mode: smtp
+
+# @var owncloud_prefix:description: Mail server host
+owncloud_smtp_host:
+
+# @var owncloud_prefix:description: Mail server port
+owncloud_smtp_port:
+
+# @var owncloud_prefix:description: Mail server username
+owncloud_smtp_username:
+
+# @var owncloud_prefix:description: Mail server password
+owncloud_smtp_password:
+
+# @var owncloud_prefix:description: Secure mode for mail server
+owncloud_smtp_secure:
+
+# @var owncloud_prefix:description: Mail sender domain
+owncloud_smtp_domain: example.com
+
+# @var owncloud_prefix:description: Mail sender address
+owncloud_smtp_address: owncloud
+
+# @var owncloud_prefix:description: Enable redis caching
+owncloud_redis_enabled: True
+
+# @var owncloud_prefix:description: Redis host
+owncloud_redis_host: redis
+
+# @var owncloud_prefix:description: Redis port
+owncloud_redis_port: 6379
+
+# @var owncloud_prefix:description: Redis database
+owncloud_redis_db:
+
+# @var owncloud_prefix:description: Redis password
+owncloud_redis_password:
+
+# @var owncloud_pre_server:description: List of pre install hooks
+owncloud_pre_server: []
+
+# @var owncloud_post_server:description: List of post install hooks
+owncloud_post_server: []
+
+# @var owncloud_pre_install:description: List of pre server hooks
+owncloud_pre_install: []
+
+# @var owncloud_post_install:description: List of post server hooks
+owncloud_post_install: []
+
+...
