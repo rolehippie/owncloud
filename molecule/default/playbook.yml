@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   vars:
-    mariadb_network: bridge
+    owncloud_network: bridge
   roles:
     - role: docker
     - role: owncloud
