@@ -16,3 +16,7 @@ def test_running_and_enabled(host):
     svc = host.service("owncloud")
     assert svc.is_running
     assert svc.is_enabled
+
+
+def test_server_socket(host):
+    assert host.socket("tcp://127.0.0.1:8080").is_listening

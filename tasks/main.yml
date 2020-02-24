@@ -176,7 +176,7 @@
   docker_network:
     name: '{{ owncloud_network }}'
 
-- name: Start service
+- name: Start owncloud service
   systemd:
     name: owncloud
     state: started
