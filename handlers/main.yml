@@ -4,6 +4,6 @@
   systemd:
     name: owncloud
     state: restarted
-    daemon_reload: yes
+    daemon_reload: True
 
 ...
