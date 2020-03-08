@@ -454,7 +454,7 @@ owncloud_volume_server: /var/lib/owncloud
 
 ## Dependencies
 
-None.
+- '[docker](https://github.com/rolehippie/docker)'
 
 ## License
 
@@ -462,4 +462,4 @@ Apache-2.0
 
 ## Author
 
-Thomas Boerger
+[Thomas Boerger](https://github.com/tboerger)
