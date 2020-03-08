@@ -4,7 +4,8 @@
 owncloud_image: owncloud/server:10.3
 
 # @var owncloud_network:description: Docker network to connect to
-owncloud_network: traefik
+# @var owncloud_network:example: $ "traefik"
+owncloud_network:
 
 # @var owncloud_volume_server:description: Path to server volume
 owncloud_volume_server: /var/lib/owncloud
@@ -16,7 +17,8 @@ owncloud_volume_hooks: /etc/owncloud
 owncloud_publish_server:
 
 # @var owncloud_cert_resolver:description: Cert resolver within traefik
-owncloud_cert_resolver: default
+# @var owncloud_cert_resolver:example: $ "default"
+owncloud_cert_resolver:
 
 # @var owncloud_secure_middlewares:description: Secure middlewares for traefik
 owncloud_secure_middlewares:
