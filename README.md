@@ -123,6 +123,12 @@ Cert resolver within traefik
 #### Default value
 
 ```YAML
+owncloud_cert_resolver:
+```
+
+#### Example usage
+
+```YAML
 owncloud_cert_resolver: default
 ```
 
@@ -235,6 +241,12 @@ owncloud_log_rotate_size: '104857600'
 Docker network to connect to
 
 #### Default value
+
+```YAML
+owncloud_network:
+```
+
+#### Example usage
 
 ```YAML
 owncloud_network: traefik
@@ -454,7 +466,8 @@ owncloud_volume_server: /var/lib/owncloud
 
 ## Dependencies
 
-- '[docker](https://github.com/rolehippie/docker)'
+* [docker](https://github.com/rolehippie/docker)
+* [traefik](https://github.com/rolehippie/traefik)
 
 ## License
 
