@@ -16,7 +16,8 @@ owncloud_volume_hooks: /etc/owncloud
 owncloud_publish_server:
 
 # @var owncloud_cert_resolver:description: Cert resolver within traefik
-owncloud_cert_resolver: default
+# @var owncloud_cert_resolver:example: $ "default"
+owncloud_cert_resolver:
 
 # @var owncloud_secure_middlewares:description: Secure middlewares for traefik
 owncloud_secure_middlewares:
