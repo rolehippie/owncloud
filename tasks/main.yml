@@ -2,154 +2,154 @@
 ---
 - name: Create required dirs
   loop:
-    - '{{ owncloud_volume_hooks }}'
-    - '{{ owncloud_volume_hooks }}/pre_install.d'
-    - '{{ owncloud_volume_hooks }}/post_install.d'
-    - '{{ owncloud_volume_hooks }}/pre_server.d'
-    - '{{ owncloud_volume_hooks }}/post_server.d'
-    - '{{ owncloud_volume_server }}'
+    - "{{ owncloud_volume_hooks }}"
+    - "{{ owncloud_volume_hooks }}/pre_install.d"
+    - "{{ owncloud_volume_hooks }}/post_install.d"
+    - "{{ owncloud_volume_hooks }}/pre_server.d"
+    - "{{ owncloud_volume_hooks }}/post_server.d"
+    - "{{ owncloud_volume_server }}"
   file:
-    path: '{{ item }}'
+    path: "{{ item }}"
     state: directory
   tags:
     - owncloud
 
 - name: Pre install content
-  loop: '{{ owncloud_pre_install | default(False) }}'
+  loop: "{{ owncloud_pre_install | default(False) }}"
   when: item.content | default(False)
   notify:
     - Restart owncloud
   copy:
-    content: '{{ item.content }}'
-    dest: '{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}'
+    content: "{{ item.content }}"
+    dest: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Pre install template
-  loop: '{{ owncloud_pre_install | default(False) }}'
+  loop: "{{ owncloud_pre_install | default(False) }}"
   when: item.path | default(False)
   notify:
     - Restart owncloud
   template:
-    src: '{{ item.path }}'
-    dest: '{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}'
+    src: "{{ item.path }}"
+    dest: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Pre install remove
-  loop: '{{ owncloud_pre_install | default(False) }}'
+  loop: "{{ owncloud_pre_install | default(False) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
   file:
-    path: '{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}'
+    path: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     state: absent
   tags:
     - owncloud
 
 - name: Post install content
-  loop: '{{ owncloud_post_install | default(False) }}'
+  loop: "{{ owncloud_post_install | default(False) }}"
   when: item.content | default(False)
   notify:
     - Restart owncloud
   copy:
-    content: '{{ item.content }}'
-    dest: '{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}'
+    content: "{{ item.content }}"
+    dest: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Post install template
-  loop: '{{ owncloud_post_install | default(False) }}'
+  loop: "{{ owncloud_post_install | default(False) }}"
   when: item.path | default(False)
   notify:
     - Restart owncloud
   template:
-    src: '{{ item.path }}'
-    dest: '{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}'
+    src: "{{ item.path }}"
+    dest: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Post install remove
-  loop: '{{ owncloud_post_install | default(False) }}'
+  loop: "{{ owncloud_post_install | default(False) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
   file:
-    path: '{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}'
+    path: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     state: absent
   tags:
     - owncloud
 
 - name: Pre server content
-  loop: '{{ owncloud_pre_server | default(False) }}'
+  loop: "{{ owncloud_pre_server | default(False) }}"
   when: item.content | default(False)
   notify:
     - Restart owncloud
   copy:
-    content: '{{ item.content }}'
-    dest: '{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}'
+    content: "{{ item.content }}"
+    dest: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Pre server template
-  loop: '{{ owncloud_pre_server | default(False) }}'
+  loop: "{{ owncloud_pre_server | default(False) }}"
   when: item.path | default(False)
   notify:
     - Restart owncloud
   template:
-    src: '{{ item.path }}'
-    dest: '{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}'
+    src: "{{ item.path }}"
+    dest: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Pre server remove
-  loop: '{{ owncloud_pre_server | default(False) }}'
+  loop: "{{ owncloud_pre_server | default(False) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
   file:
-    path: '{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}'
+    path: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     state: absent
   tags:
     - owncloud
 
 - name: Post server content
-  loop: '{{ owncloud_post_server | default(False) }}'
+  loop: "{{ owncloud_post_server | default(False) }}"
   when: item.content | default(False)
   notify:
     - Restart owncloud
   copy:
-    content: '{{ item.content }}'
-    dest: '{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}'
+    content: "{{ item.content }}"
+    dest: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Post server template
-  loop: '{{ owncloud_post_server | default(False) }}'
+  loop: "{{ owncloud_post_server | default(False) }}"
   when: item.path | default(False)
   notify:
     - Restart owncloud
   template:
-    src: '{{ item.path }}'
-    dest: '{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}'
+    src: "{{ item.path }}"
+    dest: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
   tags:
     - owncloud
 
 - name: Post server remove
-  loop: '{{ owncloud_post_server | default(False) }}'
+  loop: "{{ owncloud_post_server | default(False) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
   file:
-    path: '{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}'
+    path: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     state: absent
   tags:
     - owncloud
@@ -173,16 +173,17 @@
     - owncloud
 
 - name: Create docker network
+  when: owncloud_network | default(False)
   docker_network:
-    name: '{{ owncloud_network }}'
+    name: "{{ owncloud_network }}"
 
 - name: Start owncloud service
   systemd:
     name: owncloud
     state: started
-    daemon_reload: yes
-    masked: no
-    enabled: yes
+    daemon_reload: True
+    masked: False
+    enabled: True
   tags:
     - owncloud
 
