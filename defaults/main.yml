@@ -4,7 +4,8 @@
 owncloud_image: owncloud/server:10.3
 
 # @var owncloud_network:description: Docker network to connect to
-owncloud_network: traefik
+# @var owncloud_network:example: $ "traefik"
+owncloud_network:
 
 # @var owncloud_volume_server:description: Path to server volume
 owncloud_volume_server: /var/lib/owncloud

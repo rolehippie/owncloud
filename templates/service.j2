@@ -17,7 +17,9 @@ ExecStart=/usr/bin/docker run --rm \
   --name %p \
   --hostname %p \
   --label traefik.enable=true \
+{% if owncloud_network | default(False) %}
   --label traefik.docker.network={{ owncloud_network }} \
+{% endif %}
   --label traefik.http.services.owncloud.loadbalancer.server.port=8080 \
   --label traefik.http.services.owncloud.loadbalancer.server.scheme=http \
   --label traefik.http.services.owncloud.loadbalancer.passhostheader=true \
