@@ -1,8 +1,14 @@
 # owncloud
 
-[![Build Status](https://cloud.drone.io/api/badges/rolehippie/owncloud/status.svg)](https://cloud.drone.io/rolehippie/owncloud)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/owncloud) [![Build Status](https://img.shields.io/drone/build/rolehippie/owncloud/master?logo=drone)](https://cloud.drone.io/rolehippie/owncloud) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/owncloud)](https://github.com/rolehippie/owncloud/blob/master/LICENSE) 
 
-Ansible role to configure owncloud
+Ansible role to install and configure an ownCloud. 
+
+## Sponsor 
+
+[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu) 
+
+Building and improving this Ansible role have been sponsored by my employer **Proact Deutschland GmbH**.
 
 ## Table of content
 
@@ -62,6 +68,8 @@ Ansible role to configure owncloud
 
 ### owncloud_admin_password
 
+Password for the admin user
+
 #### Default value
 
 ```YAML
@@ -69,6 +77,8 @@ owncloud_admin_password: admin
 ```
 
 ### owncloud_admin_username
+
+Username for the admin user
 
 #### Default value
 
@@ -78,6 +88,8 @@ owncloud_admin_username: admin
 
 ### owncloud_apps_deprecated
 
+List of deprecated apps
+
 #### Default value
 
 ```YAML
@@ -85,6 +97,8 @@ owncloud_apps_deprecated: []
 ```
 
 ### owncloud_apps_disable
+
+List of apps to disable
 
 #### Default value
 
@@ -94,6 +108,8 @@ owncloud_apps_disable: []
 
 ### owncloud_apps_enable
 
+List of apps to enable
+
 #### Default value
 
 ```YAML
@@ -102,6 +118,8 @@ owncloud_apps_enable: []
 
 ### owncloud_apps_install
 
+List of apps to install
+
 #### Default value
 
 ```YAML
@@ -109,6 +127,8 @@ owncloud_apps_install: []
 ```
 
 ### owncloud_apps_uninstall
+
+List of apps to uninstall
 
 #### Default value
 
@@ -134,6 +154,8 @@ owncloud_cert_resolver: default
 
 ### owncloud_db_host
 
+Database host
+
 #### Default value
 
 ```YAML
@@ -141,6 +163,8 @@ owncloud_db_host: mariadb:3306
 ```
 
 ### owncloud_db_name
+
+Database name
 
 #### Default value
 
@@ -150,6 +174,8 @@ owncloud_db_name: owncloud
 
 ### owncloud_db_password
 
+Database password
+
 #### Default value
 
 ```YAML
@@ -157,6 +183,8 @@ owncloud_db_password:
 ```
 
 ### owncloud_db_type
+
+Database type to use
 
 #### Default value
 
@@ -166,6 +194,8 @@ owncloud_db_type: mysql
 
 ### owncloud_db_username
 
+Database username
+
 #### Default value
 
 ```YAML
@@ -173,6 +203,8 @@ owncloud_db_username:
 ```
 
 ### owncloud_db_utf8mb4
+
+Enable utf8mb4 database
 
 #### Default value
 
@@ -214,6 +246,8 @@ owncloud_insecure_middlewares:
 
 ### owncloud_log_file
 
+Path to logfile within container
+
 #### Default value
 
 ```YAML
@@ -222,6 +256,8 @@ owncloud_log_file: /dev/stdout
 
 ### owncloud_log_level
 
+Logging level
+
 #### Default value
 
 ```YAML
@@ -229,6 +265,8 @@ owncloud_log_level: '2'
 ```
 
 ### owncloud_log_rotate_size
+
+Log rotation file size
 
 #### Default value
 
@@ -294,7 +332,7 @@ owncloud_pre_server: []
 
 ### owncloud_prefix
 
-Redis password
+Prefix used to access ownCloud
 
 #### Default value
 
@@ -314,6 +352,8 @@ owncloud_publish_server:
 
 ### owncloud_redis_db
 
+Redis database
+
 #### Default value
 
 ```YAML
@@ -321,6 +361,8 @@ owncloud_redis_db:
 ```
 
 ### owncloud_redis_enabled
+
+Enable redis caching
 
 #### Default value
 
@@ -330,6 +372,8 @@ owncloud_redis_enabled: true
 
 ### owncloud_redis_host
 
+Redis host
+
 #### Default value
 
 ```YAML
@@ -338,6 +382,8 @@ owncloud_redis_host: redis
 
 ### owncloud_redis_password
 
+Redis password
+
 #### Default value
 
 ```YAML
@@ -345,6 +391,8 @@ owncloud_redis_password:
 ```
 
 ### owncloud_redis_port
+
+Redis port
 
 #### Default value
 
@@ -366,6 +414,8 @@ owncloud_secure_middlewares:
 
 ### owncloud_smtp_address
 
+Mail sender address
+
 #### Default value
 
 ```YAML
@@ -373,6 +423,8 @@ owncloud_smtp_address: owncloud
 ```
 
 ### owncloud_smtp_auth
+
+Enable SMTP auth
 
 #### Default value
 
@@ -382,6 +434,8 @@ owncloud_smtp_auth: true
 
 ### owncloud_smtp_auth_type
 
+Mail auth type
+
 #### Default value
 
 ```YAML
@@ -389,6 +443,8 @@ owncloud_smtp_auth_type: LOGIN
 ```
 
 ### owncloud_smtp_domain
+
+Mail sender domain
 
 #### Default value
 
@@ -398,6 +454,8 @@ owncloud_smtp_domain: example.com
 
 ### owncloud_smtp_host
 
+Mail server host
+
 #### Default value
 
 ```YAML
@@ -405,6 +463,8 @@ owncloud_smtp_host:
 ```
 
 ### owncloud_smtp_mode
+
+Mail sending mode
 
 #### Default value
 
@@ -414,6 +474,8 @@ owncloud_smtp_mode: smtp
 
 ### owncloud_smtp_password
 
+Mail server password
+
 #### Default value
 
 ```YAML
@@ -421,6 +483,8 @@ owncloud_smtp_password:
 ```
 
 ### owncloud_smtp_port
+
+Mail server port
 
 #### Default value
 
@@ -430,6 +494,8 @@ owncloud_smtp_port:
 
 ### owncloud_smtp_secure
 
+Secure mode for mail server
+
 #### Default value
 
 ```YAML
@@ -437,6 +503,8 @@ owncloud_smtp_secure:
 ```
 
 ### owncloud_smtp_username
+
+Mail server username
 
 #### Default value
 
@@ -466,8 +534,8 @@ owncloud_volume_server: /var/lib/owncloud
 
 ## Dependencies
 
-* [docker](https://github.com/rolehippie/docker)
-* [traefik](https://github.com/rolehippie/traefik)
+* [rolehippie.docker](https://github.com/rolehippie/docker)
+* [rolehippie.traefik](https://github.com/rolehippie/traefik)
 
 ## License
 
