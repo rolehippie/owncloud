@@ -1,6 +1,6 @@
 # owncloud
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/owncloud) [![Build Status](https://img.shields.io/drone/build/rolehippie/owncloud/master?logo=drone)](https://cloud.drone.io/rolehippie/owncloud) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/owncloud)](https://github.com/rolehippie/owncloud/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/owncloud) [![Testing Build](https://github.com/rolehippie/owncloud/workflows/testing/badge.svg)](https://github.com/rolehippie/owncloud/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/owncloud/workflows/readme/badge.svg)](https://github.com/rolehippie/owncloud/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/owncloud/workflows/galaxy/badge.svg)](https://github.com/rolehippie/owncloud/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/owncloud)](https://github.com/rolehippie/owncloud/blob/master/LICENSE) 
 
 Ansible role to install and configure an ownCloud. 
 
