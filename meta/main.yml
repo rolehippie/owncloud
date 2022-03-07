@@ -21,6 +21,8 @@
 # [rolehippie.traefik](https://github.com/rolehippie/traefik)
 # @end
 galaxy_info:
+  role_name: owncloud
+  namespace: rolehippie
   author: Thomas Boerger
   description: Ansible role to install and configure an ownCloud
   license: Apache-2.0
