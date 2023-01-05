@@ -5,7 +5,7 @@
   vars:
     owncloud_publish_server: 127.0.0.1:8080
   roles:
-    - role: docker
-    - role: owncloud
+    - role: rolehippie.docker
+    - role: rolehippie.owncloud
 
 ...
