@@ -1,6 +1,11 @@
 # owncloud
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/owncloud) [![General Workflow](https://github.com/rolehippie/owncloud/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/general.yml) [![Readme Workflow](https://github.com/rolehippie/owncloud/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/readme.yml) [![Galaxy Workflow](https://github.com/rolehippie/owncloud/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/galaxy.yml) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/owncloud)](https://github.com/rolehippie/owncloud/blob/master/LICENSE) [![Ansible Role](https://img.shields.io/ansible/role/51447)](https://galaxy.ansible.com/rolehippie/owncloud)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&amp;logoColor=white)](https://github.com/rolehippie/owncloud)
+[![General Workflow](https://github.com/rolehippie/owncloud/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/general.yml)
+[![Readme Workflow](https://github.com/rolehippie/owncloud/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/readme.yml)
+[![Galaxy Workflow](https://github.com/rolehippie/owncloud/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/galaxy.yml)
+[![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/owncloud)](https://github.com/rolehippie/owncloud/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/role-rolehippie.owncloud-blue)](https://galaxy.ansible.com/rolehippie/owncloud)
 
 Ansible role to install and configure an ownCloud.
 
