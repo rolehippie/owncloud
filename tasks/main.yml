@@ -181,10 +181,22 @@
   tags:
     - owncloud
 
+- name: Pull docker image
+  when:
+    - owncloud_pull_image
+  docker_image:
+    name: "{{ owncloud_image }}"
+    source: pull
+  tags:
+    - owncloud
+
 - name: Create docker network
-  when: owncloud_network | default(False)
+  when:
+    - owncloud_network | default(False)
   docker_network:
-    name: "{{ owncloud_network }}"
+    name: '{{ owncloud_network }}'
+  tags:
+    - owncloud
 
 - name: Start owncloud service
   systemd:

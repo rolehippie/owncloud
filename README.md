@@ -44,6 +44,7 @@ Building and improving this Ansible role have been sponsored by my current and p
   - [owncloud_pre_server](#owncloud_pre_server)
   - [owncloud_prefix](#owncloud_prefix)
   - [owncloud_publish_server](#owncloud_publish_server)
+  - [owncloud_pull_image](#owncloud_pull_image)
   - [owncloud_redis_db](#owncloud_redis_db)
   - [owncloud_redis_enabled](#owncloud_redis_enabled)
   - [owncloud_redis_host](#owncloud_redis_host)
@@ -358,6 +359,16 @@ Publish the service on that binding
 
 ```YAML
 owncloud_publish_server:
+```
+
+### owncloud_pull_image
+
+Pull image as part of the tasks
+
+#### Default value
+
+```YAML
+owncloud_pull_image: true
 ```
 
 ### owncloud_redis_db
