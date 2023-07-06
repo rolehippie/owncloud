@@ -2,7 +2,7 @@
 ---
 # @var owncloud_version:description: Version of the Docker image
 # renovate: datasource=docker depName=owncloud/server
-owncloud_version: 10.3.2
+owncloud_version: 10.12.2
 
 # @var owncloud_image:description: Docker image to use
 owncloud_image: "owncloud/server:{{ owncloud_version }}"
