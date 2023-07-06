@@ -1,7 +1,11 @@
 # Standards: 1.2
 ---
+# @var owncloud_version:description: Version of the Docker image
+# renovate: datasource=docker depName=owncloud/server
+owncloud_version: 10.3.2
+
 # @var owncloud_image:description: Docker image to use
-owncloud_image: owncloud/server:10.3
+owncloud_image: "owncloud/server:{{ owncloud_version }}"
 
 # @var owncloud_pull_image:description: Pull image as part of the tasks
 owncloud_pull_image: True

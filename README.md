@@ -61,6 +61,7 @@ Building and improving this Ansible role have been sponsored by my current and p
   - [owncloud_smtp_port](#owncloud_smtp_port)
   - [owncloud_smtp_secure](#owncloud_smtp_secure)
   - [owncloud_smtp_username](#owncloud_smtp_username)
+  - [owncloud_version](#owncloud_version)
   - [owncloud_volume_hooks](#owncloud_volume_hooks)
   - [owncloud_volume_server](#owncloud_volume_server)
 - [Discovered Tags](#discovered-tags)
@@ -240,7 +241,7 @@ Docker image to use
 #### Default value
 
 ```YAML
-owncloud_image: owncloud/server:10.3
+owncloud_image: owncloud/server:{{ owncloud_version }}
 ```
 
 ### owncloud_insecure_middlewares
@@ -531,6 +532,16 @@ Mail server username
 
 ```YAML
 owncloud_smtp_username:
+```
+
+### owncloud_version
+
+Version of the Docker image
+
+#### Default value
+
+```YAML
+owncloud_version: 10.3.2
 ```
 
 ### owncloud_volume_hooks
