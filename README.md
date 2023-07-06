@@ -541,7 +541,7 @@ Version of the Docker image
 #### Default value
 
 ```YAML
-owncloud_version: 10.3.2
+owncloud_version: 10.12.2
 ```
 
 ### owncloud_volume_hooks
