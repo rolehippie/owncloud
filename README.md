@@ -571,7 +571,7 @@ owncloud_volume_server: /var/lib/owncloud
 ## Dependencies
 
 - [rolehippie.docker](https://github.com/rolehippie/docker)
-- [rolehippie.traefik](https://github.com/rolehippie/traefik)
+- [community.docker](https://github.com/ansible-collections/community.docker)
 
 ## License
 
