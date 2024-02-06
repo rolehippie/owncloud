@@ -1,4 +1,3 @@
-# Standards: 1.2
 ---
 - name: Create required dirs
   loop:
@@ -8,7 +7,7 @@
     - "{{ owncloud_volume_hooks }}/pre_server.d"
     - "{{ owncloud_volume_hooks }}/post_server.d"
     - "{{ owncloud_volume_server }}"
-  file:
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
     owner: root
@@ -22,7 +21,7 @@
   when: item.content | default(False)
   notify:
     - Restart owncloud
-  copy:
+  ansible.builtin.copy:
     content: "{{ item.content }}"
     dest: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -34,7 +33,7 @@
   when: item.path | default(False)
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: "{{ item.path }}"
     dest: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -46,7 +45,7 @@
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
-  file:
+  ansible.builtin.file:
     path: "{{ owncloud_volume_hooks }}/pre_install.d/{{ item.name }}"
     state: absent
   tags:
@@ -57,7 +56,7 @@
   when: item.content | default(False)
   notify:
     - Restart owncloud
-  copy:
+  ansible.builtin.copy:
     content: "{{ item.content }}"
     dest: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -69,7 +68,7 @@
   when: item.path | default(False)
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: "{{ item.path }}"
     dest: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -81,7 +80,7 @@
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
-  file:
+  ansible.builtin.file:
     path: "{{ owncloud_volume_hooks }}/post_install.d/{{ item.name }}"
     state: absent
   tags:
@@ -92,7 +91,7 @@
   when: item.content | default(False)
   notify:
     - Restart owncloud
-  copy:
+  ansible.builtin.copy:
     content: "{{ item.content }}"
     dest: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -104,7 +103,7 @@
   when: item.path | default(False)
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: "{{ item.path }}"
     dest: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -116,7 +115,7 @@
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
-  file:
+  ansible.builtin.file:
     path: "{{ owncloud_volume_hooks }}/pre_server.d/{{ item.name }}"
     state: absent
   tags:
@@ -127,7 +126,7 @@
   when: item.content | default(False)
   notify:
     - Restart owncloud
-  copy:
+  ansible.builtin.copy:
     content: "{{ item.content }}"
     dest: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -139,7 +138,7 @@
   when: item.path | default(False)
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: "{{ item.path }}"
     dest: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     mode: u=rwx,g=rx,o=rx
@@ -151,7 +150,7 @@
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
-  file:
+  ansible.builtin.file:
     path: "{{ owncloud_volume_hooks }}/post_server.d/{{ item.name }}"
     state: absent
   tags:
@@ -160,7 +159,7 @@
 - name: Write env config
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: default.j2
     dest: /etc/default/owncloud
     owner: root
@@ -172,7 +171,7 @@
 - name: Write service file
   notify:
     - Restart owncloud
-  template:
+  ansible.builtin.template:
     src: service.j2
     dest: /etc/systemd/system/owncloud.service
     owner: root
@@ -184,7 +183,7 @@
 - name: Pull docker image
   when:
     - owncloud_pull_image
-  docker_image:
+  community.docker.docker_image:
     name: "{{ owncloud_image }}"
     source: pull
   tags:
@@ -193,13 +192,13 @@
 - name: Create docker network
   when:
     - owncloud_network | default(False)
-  docker_network:
+  community.docker.docker_network:
     name: '{{ owncloud_network }}'
   tags:
     - owncloud
 
 - name: Start owncloud service
-  systemd:
+  ansible.builtin.systemd:
     name: owncloud
     state: started
     daemon_reload: True
