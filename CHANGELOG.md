@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/rolehippie/owncloud/compare/v1.2.2...v2.0.0) (2024-02-12)
+
+
+### Features
+
+* drop support for ubuntu 18.04 ([b38898b](https://github.com/rolehippie/owncloud/commit/b38898baa763936fcbee9eb04f603fb4ec498f65))
+* used full qualified collection names ([e37409f](https://github.com/rolehippie/owncloud/commit/e37409f975b493893e9533839fe7f07d74ec3f55))
+
+
+### Bugfixes
+
+* remove meta requirements and document used collections ([f0341f5](https://github.com/rolehippie/owncloud/commit/f0341f58f59b57be50df93af6522a0d263dd04d2))
+
 ## [1.2.2](https://github.com/rolehippie/owncloud/compare/v1.2.1...v1.2.2) (2023-12-25)
 
 
