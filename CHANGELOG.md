@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/owncloud/compare/v2.0.0...v2.1.0) (2024-04-01)
+
+
+### Features
+
+* **deps:** update owncloud/server docker tag to v10.14.0 ([496c070](https://github.com/rolehippie/owncloud/commit/496c0709245144ad08cf561cb03167a8553d54f1))
+
 ## [2.0.0](https://github.com/rolehippie/owncloud/compare/v1.2.2...v2.0.0) (2024-02-12)
 
 
