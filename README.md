@@ -1,4 +1,4 @@
-# owncloud
+# workspace
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/owncloud)
 [![General Workflow](https://github.com/rolehippie/owncloud/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/owncloud/actions/workflows/general.yml)
@@ -540,7 +540,7 @@ Version of the Docker image
 #### Default value
 
 ```YAML
-owncloud_version: 10.15.2
+owncloud_version: 10.15.3
 ```
 
 ### owncloud_volume_hooks
@@ -566,7 +566,6 @@ owncloud_volume_server: /var/lib/owncloud
 ## Discovered Tags
 
 **_owncloud_**
-
 
 ## Dependencies
 
