@@ -7,7 +7,7 @@ owncloud_version: 10.15.3
 owncloud_image: "owncloud/server:{{ owncloud_version }}"
 
 # @var owncloud_pull_image:description: Pull image as part of the tasks
-owncloud_pull_image: True
+owncloud_pull_image: true
 
 # @var owncloud_network:description: Docker network to connect to
 # @var owncloud_network:example: $ "traefik"
@@ -64,7 +64,7 @@ owncloud_db_password:
 owncloud_db_name: owncloud
 
 # @var owncloud_db_utf8mb4:description: Enable utf8mb4 database
-owncloud_db_utf8mb4: True
+owncloud_db_utf8mb4: true
 
 # @var owncloud_apps_install:description: List of apps to install
 owncloud_apps_install: []
@@ -91,7 +91,7 @@ owncloud_log_level: '2'
 owncloud_log_rotate_size: '104857600'
 
 # @var owncloud_smtp_auth:description: Enable SMTP auth
-owncloud_smtp_auth: True
+owncloud_smtp_auth: true
 
 # @var owncloud_smtp_auth_type:description: Mail auth type
 owncloud_smtp_auth_type: LOGIN
@@ -121,7 +121,7 @@ owncloud_smtp_domain: example.com
 owncloud_smtp_address: owncloud
 
 # @var owncloud_redis_enabled:description: Enable redis caching
-owncloud_redis_enabled: True
+owncloud_redis_enabled: true
 
 # @var owncloud_redis_host:description: Redis host
 owncloud_redis_host: redis

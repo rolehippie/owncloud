@@ -1,6 +1,6 @@
 OWNCLOUD_PROTOCOL=https
 OWNCLOUD_DOMAIN={{ owncloud_domain }}
-{% if owncloud_prefix | default(False) %}
+{% if owncloud_prefix | default(false) %}
 OWNCLOUD_SUB_URL={{ owncloud_prefix }}
 {% else %}
 OWNCLOUD_SUB_URL=/

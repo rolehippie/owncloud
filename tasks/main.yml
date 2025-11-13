@@ -17,8 +17,8 @@
     - owncloud
 
 - name: Pre install content
-  loop: "{{ owncloud_pre_install | default(False) }}"
-  when: item.content | default(False)
+  loop: "{{ owncloud_pre_install | default(false) }}"
+  when: item.content | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.copy:
@@ -29,8 +29,8 @@
     - owncloud
 
 - name: Pre install template
-  loop: "{{ owncloud_pre_install | default(False) }}"
-  when: item.path | default(False)
+  loop: "{{ owncloud_pre_install | default(false) }}"
+  when: item.path | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.template:
@@ -41,7 +41,7 @@
     - owncloud
 
 - name: Pre install remove
-  loop: "{{ owncloud_pre_install | default(False) }}"
+  loop: "{{ owncloud_pre_install | default(false) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
@@ -52,8 +52,8 @@
     - owncloud
 
 - name: Post install content
-  loop: "{{ owncloud_post_install | default(False) }}"
-  when: item.content | default(False)
+  loop: "{{ owncloud_post_install | default(false) }}"
+  when: item.content | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.copy:
@@ -64,8 +64,8 @@
     - owncloud
 
 - name: Post install template
-  loop: "{{ owncloud_post_install | default(False) }}"
-  when: item.path | default(False)
+  loop: "{{ owncloud_post_install | default(false) }}"
+  when: item.path | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.template:
@@ -76,7 +76,7 @@
     - owncloud
 
 - name: Post install remove
-  loop: "{{ owncloud_post_install | default(False) }}"
+  loop: "{{ owncloud_post_install | default(false) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
@@ -87,8 +87,8 @@
     - owncloud
 
 - name: Pre server content
-  loop: "{{ owncloud_pre_server | default(False) }}"
-  when: item.content | default(False)
+  loop: "{{ owncloud_pre_server | default(false) }}"
+  when: item.content | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.copy:
@@ -99,8 +99,8 @@
     - owncloud
 
 - name: Pre server template
-  loop: "{{ owncloud_pre_server | default(False) }}"
-  when: item.path | default(False)
+  loop: "{{ owncloud_pre_server | default(false) }}"
+  when: item.path | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.template:
@@ -111,7 +111,7 @@
     - owncloud
 
 - name: Pre server remove
-  loop: "{{ owncloud_pre_server | default(False) }}"
+  loop: "{{ owncloud_pre_server | default(false) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
@@ -122,8 +122,8 @@
     - owncloud
 
 - name: Post server content
-  loop: "{{ owncloud_post_server | default(False) }}"
-  when: item.content | default(False)
+  loop: "{{ owncloud_post_server | default(false) }}"
+  when: item.content | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.copy:
@@ -134,8 +134,8 @@
     - owncloud
 
 - name: Post server template
-  loop: "{{ owncloud_post_server | default(False) }}"
-  when: item.path | default(False)
+  loop: "{{ owncloud_post_server | default(false) }}"
+  when: item.path | default(false)
   notify:
     - Restart owncloud
   ansible.builtin.template:
@@ -146,7 +146,7 @@
     - owncloud
 
 - name: Post server remove
-  loop: "{{ owncloud_post_server | default(False) }}"
+  loop: "{{ owncloud_post_server | default(false) }}"
   when: item.state | default("present") == "absent"
   notify:
     - Restart owncloud
@@ -191,7 +191,7 @@
 
 - name: Create docker network
   when:
-    - owncloud_network | default(False)
+    - false if owncloud_network is none else (owncloud_network | length > 0)| default(false)
   community.docker.docker_network:
     name: '{{ owncloud_network }}'
   tags:
@@ -201,9 +201,9 @@
   ansible.builtin.systemd:
     name: owncloud
     state: started
-    daemon_reload: True
-    masked: False
-    enabled: True
+    daemon_reload: true
+    masked: false
+    enabled: true
   tags:
     - owncloud
 
