@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/rolehippie/owncloud/compare/v2.2.3...v2.3.0) (2025-11-17)
+
+
+### Features
+
+* apply new repo structure and update linting ([53f2cbc](https://github.com/rolehippie/owncloud/commit/53f2cbc9b544a22288732bf086c76bd80185b122))
+
 ## [2.2.3](https://github.com/rolehippie/owncloud/compare/v2.2.2...v2.2.3) (2025-07-14)
 
 
