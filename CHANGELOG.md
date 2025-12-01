@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.0](https://github.com/rolehippie/owncloud/compare/v2.3.0...v3.0.0) (2025-12-01)
+
+
+### Features
+
+* **major:** update dependency community.docker to v5 ([ab66aa1](https://github.com/rolehippie/owncloud/commit/ab66aa1a8c608cbeb4b0c683f06e59a13eeefe9e))
+* **minor:** update owncloud/server docker tag to v10.16.0 ([decc543](https://github.com/rolehippie/owncloud/commit/decc543a2709a6941ace1e7c1d602ad49a383da9))
+
 ## [2.3.0](https://github.com/rolehippie/owncloud/compare/v2.2.3...v2.3.0) (2025-11-17)
 
 
