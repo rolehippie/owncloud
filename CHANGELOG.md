@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.0.1](https://github.com/rolehippie/owncloud/compare/v3.0.0...v3.0.1) (2026-02-23)
+
+### Dependencies
+
+* **patch:** update owncloud/server docker tag to v10.16.1 ([#55](https://github.com/rolehippie/owncloud/issues/55)) ([be799cd](https://github.com/rolehippie/owncloud/commit/be799cd9ca10e81ce584e41379d6f5333f8c59fc))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([31cecd1](https://github.com/rolehippie/owncloud/commit/31cecd1906a2bc2e05e9b2374945ea41efa0923b))
+* **flake:** updated lockfile [skip ci] ([d6c38de](https://github.com/rolehippie/owncloud/commit/d6c38de48df4c21f0997e6d3228485d330a2f529))
+* **flake:** updated lockfile [skip ci] ([77ba43e](https://github.com/rolehippie/owncloud/commit/77ba43efb66f946652e99811c5fd2de0c124f7db))
+* **flake:** updated lockfile [skip ci] ([1e52ae8](https://github.com/rolehippie/owncloud/commit/1e52ae85c142d71318c4120eb3f941dd1869525f))
+* **flake:** updated lockfile [skip ci] ([5f8ca75](https://github.com/rolehippie/owncloud/commit/5f8ca75ea446a7def740010e70109e2ff0eeaa04))
+* **flake:** updated lockfile [skip ci] ([bdc4433](https://github.com/rolehippie/owncloud/commit/bdc4433e2dd2c06e35f70f96a40c5bb0a5bdde16))
+* **flake:** updated lockfile [skip ci] ([f8fb544](https://github.com/rolehippie/owncloud/commit/f8fb5444ff9a22770d699dde8d3656d5e0e717dd))
+* **flake:** updated lockfile [skip ci] ([37cf03e](https://github.com/rolehippie/owncloud/commit/37cf03e06c2121930ef02bfc2132e05effcf2e9a))
+* **flake:** updated lockfile [skip ci] ([9a1e583](https://github.com/rolehippie/owncloud/commit/9a1e583543f2f78bb883eb9e10d644e89ed24df3))
+* **flake:** updated lockfile [skip ci] ([76650ab](https://github.com/rolehippie/owncloud/commit/76650ab1a65c0925d49ace40b6177d29e39d85a8))
+* **flake:** updated lockfile [skip ci] ([c729e41](https://github.com/rolehippie/owncloud/commit/c729e41540589818bae21c3d37240f958501afc2))
+* **flake:** updated lockfile [skip ci] ([a5e3953](https://github.com/rolehippie/owncloud/commit/a5e39532ec20c2a6219866a3e5b2b15304f4a1d2))
+
 ## [3.0.0](https://github.com/rolehippie/owncloud/compare/v2.3.0...v3.0.0) (2025-12-01)
 
 
