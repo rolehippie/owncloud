@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.1.0](https://github.com/rolehippie/owncloud/compare/v3.0.1...v3.1.0) (2026-03-30)
+
+### Dependencies
+
+* **minor:** update dependency community.docker to >=5.1.0,<5.2.0 ([#58](https://github.com/rolehippie/owncloud/issues/58)) ([7ce5b92](https://github.com/rolehippie/owncloud/commit/7ce5b92e8706d0d18c3a7a0acf9feec1f3b43756))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([2f6ceb3](https://github.com/rolehippie/owncloud/commit/2f6ceb3ff60165146a27df3179779dc80a192958))
+* **flake:** updated lockfile [skip ci] ([44614b7](https://github.com/rolehippie/owncloud/commit/44614b7231b783974711ea8c5b4f28734a8ea3bd))
+* **flake:** updated lockfile [skip ci] ([6b20a78](https://github.com/rolehippie/owncloud/commit/6b20a78c0c0e559cf0112f3825ed58ec34fe2a87))
+* **flake:** updated lockfile [skip ci] ([ce265ca](https://github.com/rolehippie/owncloud/commit/ce265ca75f1e217b90c90aef5ebe475b91bc1b53))
+* **flake:** updated lockfile [skip ci] ([0fe0a48](https://github.com/rolehippie/owncloud/commit/0fe0a48154bbd6f214006d5bd85b67030351ba9e))
+
 ## [3.0.1](https://github.com/rolehippie/owncloud/compare/v3.0.0...v3.0.1) (2026-02-23)
 
 ### Dependencies
