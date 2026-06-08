@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.2.2](https://github.com/rolehippie/owncloud/compare/v3.2.1...v3.2.2) (2026-06-08)
+
+### Dependencies
+
+* **patch:** update owncloud/server docker tag to v10.16.3 ([5cb7a80](https://github.com/rolehippie/owncloud/commit/5cb7a804bed6fd65f77140a4e50b6a8407bd48fc))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([3b56026](https://github.com/rolehippie/owncloud/commit/3b56026cbf20002ea9fe4358317eace9766cbc59))
+* **flake:** updated lockfile [skip ci] ([fbaaff3](https://github.com/rolehippie/owncloud/commit/fbaaff396594c12660bdfda654815184bd29ae34))
+* **flake:** updated lockfile [skip ci] ([8d18370](https://github.com/rolehippie/owncloud/commit/8d183706cb4c757d4f8bef77312bf52194972b16))
+* **flake:** updated lockfile [skip ci] ([21aaaef](https://github.com/rolehippie/owncloud/commit/21aaaef71f62d010084c6e08d94e9ffde4d5e5aa))
+* **flake:** updated lockfile [skip ci] ([27237a4](https://github.com/rolehippie/owncloud/commit/27237a418bc6377d8dc3906c8c4b82541839eb99))
+* **flake:** updated lockfile [skip ci] ([df2bdac](https://github.com/rolehippie/owncloud/commit/df2bdac44fd61b86951477e3a16f349865c4e142))
+
 ## [3.2.1](https://github.com/rolehippie/owncloud/compare/v3.2.0...v3.2.1) (2026-04-27)
 
 ### Dependencies
