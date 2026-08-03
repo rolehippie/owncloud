@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.0](https://github.com/rolehippie/owncloud/compare/v3.3.0...v4.0.0) (2026-08-03)
+
+### Dependencies
+
+* **major:** update owncloud/server docker tag to v11 ([#67](https://github.com/rolehippie/owncloud/issues/67)) ([9f2e894](https://github.com/rolehippie/owncloud/commit/9f2e894f7f1cf8d8ff5de874781d58a8df3b1f2b))
+* **patch:** update owncloud/server docker tag to v10.16.4 ([#66](https://github.com/rolehippie/owncloud/issues/66)) ([5b870c2](https://github.com/rolehippie/owncloud/commit/5b870c22a00bd25eca39e7d8027d1fc40caad66e))
+
 ## [3.3.0](https://github.com/rolehippie/owncloud/compare/v3.2.2...v3.3.0) (2026-07-27)
 
 ## [3.2.2](https://github.com/rolehippie/owncloud/compare/v3.2.1...v3.2.2) (2026-06-08)
