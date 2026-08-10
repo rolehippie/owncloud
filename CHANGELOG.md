@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/rolehippie/owncloud/compare/v4.0.0...v4.1.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#70](https://github.com/rolehippie/owncloud/issues/70)) ([8a47732](https://github.com/rolehippie/owncloud/commit/8a477325ba223e21d185bcd25ca96c9c68d096de))
+* **patch:** update dependency python to v3.14.7 ([#68](https://github.com/rolehippie/owncloud/issues/68)) ([97c3af0](https://github.com/rolehippie/owncloud/commit/97c3af071a320c0d3b693ca005ef7369e5326593))
+
 ## [4.0.0](https://github.com/rolehippie/owncloud/compare/v3.3.0...v4.0.0) (2026-08-03)
 
 ### Dependencies
