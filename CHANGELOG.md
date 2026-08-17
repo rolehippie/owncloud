@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.2.0](https://github.com/rolehippie/owncloud/compare/v4.1.0...v4.2.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#73](https://github.com/rolehippie/owncloud/issues/73)) ([37c488e](https://github.com/rolehippie/owncloud/commit/37c488e2169cf93901dd15a0f7908479e9009991))
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#74](https://github.com/rolehippie/owncloud/issues/74)) ([3f695c9](https://github.com/rolehippie/owncloud/commit/3f695c94474164b58edef7c260de11ad910fa63a))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#71](https://github.com/rolehippie/owncloud/issues/71)) ([d711564](https://github.com/rolehippie/owncloud/commit/d7115649d316b4cf0b7e1d2c9b7c076d3e7b00af))
+* **patch:** update dependency pre-commit to v4.6.2 ([#72](https://github.com/rolehippie/owncloud/issues/72)) ([01a8146](https://github.com/rolehippie/owncloud/commit/01a8146178beb71769faa78a910fba9d65a78bd9))
+
 ## [4.1.0](https://github.com/rolehippie/owncloud/compare/v4.0.0...v4.1.0) (2026-08-10)
 
 ### Dependencies
