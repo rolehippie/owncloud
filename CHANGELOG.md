@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.2.1](https://github.com/rolehippie/owncloud/compare/v4.2.0...v4.2.1) (2026-08-31)
+
+### Dependencies
+
+* **patch:** update dependency pipx:ansible-doctor to v8.4.1 ([#75](https://github.com/rolehippie/owncloud/issues/75)) ([e9993b2](https://github.com/rolehippie/owncloud/commit/e9993b21a12a522569a695ca20f1fd5ec92e298d))
+
 ## [4.2.0](https://github.com/rolehippie/owncloud/compare/v4.1.0...v4.2.0) (2026-08-17)
 
 ### Dependencies
