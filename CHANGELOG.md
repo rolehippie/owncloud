@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.3.1](https://github.com/rolehippie/owncloud/compare/v4.3.0...v4.3.1) (2026-09-28)
+
+### Dependencies
+
+* **mise:** update dependency pipx:ansible-core to v2.21.4 ([#77](https://github.com/rolehippie/owncloud/issues/77)) ([c483ea0](https://github.com/rolehippie/owncloud/commit/c483ea0d068e7d5a52f1a7818dc06c0742fcedb8))
+* **mise:** update dependency pipx:ansible-doctor to v8.4.2 ([#79](https://github.com/rolehippie/owncloud/issues/79)) ([220dcb1](https://github.com/rolehippie/owncloud/commit/220dcb104134ac6707577b2a1b4cfeb1853d03dc))
+* **mise:** update dependency pipx:ansible-lint to v26.9.0 ([#80](https://github.com/rolehippie/owncloud/issues/80)) ([de1369b](https://github.com/rolehippie/owncloud/commit/de1369baa89a2301f04997b71a57c5c89ad8c321))
+* **mise:** update dependency pipx:molecule to v26.9.0 ([#81](https://github.com/rolehippie/owncloud/issues/81)) ([0467cc0](https://github.com/rolehippie/owncloud/commit/0467cc0d822d64a173be2f26a0bfa128439d102e))
+* **mise:** update dependency prek to v0.5.3 ([#78](https://github.com/rolehippie/owncloud/issues/78)) ([ebfc77e](https://github.com/rolehippie/owncloud/commit/ebfc77eff382e868fc7fda4651c33d480b4789ca))
+* **mise:** update dependency prek to v0.5.4 ([#83](https://github.com/rolehippie/owncloud/issues/83)) ([30e2962](https://github.com/rolehippie/owncloud/commit/30e2962e5eca713e670b9b9d082f13c15d31dd12))
+* **patch:** update owncloud/server docker tag to v11.0.1 ([#82](https://github.com/rolehippie/owncloud/issues/82)) ([e0879e5](https://github.com/rolehippie/owncloud/commit/e0879e501e4d9202be94cab515ca3772e3bca7cb))
+
 ## [4.3.0](https://github.com/rolehippie/owncloud/compare/v4.2.1...v4.3.0) (2026-09-07)
 
 ### Features
