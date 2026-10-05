@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.4.0](https://github.com/rolehippie/owncloud/compare/v4.3.1...v4.4.0) (2026-10-05)
+
+### Dependencies
+
+* **minor:** update dependency community.docker to >=5.4.0,<5.5.0 ([#85](https://github.com/rolehippie/owncloud/issues/85)) ([0e428c1](https://github.com/rolehippie/owncloud/commit/0e428c122c20b2019f902210371efa89f279c235))
+
 ## [4.3.1](https://github.com/rolehippie/owncloud/compare/v4.3.0...v4.3.1) (2026-09-28)
 
 ### Dependencies
