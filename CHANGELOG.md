@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.5.0](https://github.com/rolehippie/owncloud/compare/v4.4.0...v4.5.0) (2026-11-09)
+
+### Dependencies
+
+* **minor:** update owncloud/server docker tag to v11.1.0 ([#97](https://github.com/rolehippie/owncloud/issues/97)) ([0bef7e2](https://github.com/rolehippie/owncloud/commit/0bef7e2a194f898efb4071dbe708dd71f48e1fe9))
+* **mise:** update dependency pipx:ansible-core to v2.21.5 ([#87](https://github.com/rolehippie/owncloud/issues/87)) ([58ac38b](https://github.com/rolehippie/owncloud/commit/58ac38b261e6d0dffafc564481f915642d2cac13))
+* **mise:** update dependency pipx:ansible-doctor to v8.4.3 ([#88](https://github.com/rolehippie/owncloud/issues/88)) ([59c0852](https://github.com/rolehippie/owncloud/commit/59c085209fc70b3ee2badbfc4de830d267c5e690))
+* **mise:** update dependency pipx:ansible-lint to v26.10.0 ([#89](https://github.com/rolehippie/owncloud/issues/89)) ([1374137](https://github.com/rolehippie/owncloud/commit/13741377e30a04b670f2cb038bbfe96f607fe61e))
+* **mise:** update dependency pipx:ansible-lint to v26.10.1 ([#91](https://github.com/rolehippie/owncloud/issues/91)) ([2b3141e](https://github.com/rolehippie/owncloud/commit/2b3141e6486ce0ba4115a63ce41f2c9d39b1930b))
+* **mise:** update dependency pipx:molecule to v26.10.0 ([#90](https://github.com/rolehippie/owncloud/issues/90)) ([34e0989](https://github.com/rolehippie/owncloud/commit/34e0989bd22f8bfb1cb3897cba55b0ac4a305c52))
+* **mise:** update dependency prek to v0.5.5 ([#86](https://github.com/rolehippie/owncloud/issues/86)) ([935206f](https://github.com/rolehippie/owncloud/commit/935206fa84a547ae2e911b761aaec4980abd6ec6))
+* **mise:** update dependency prek to v0.5.6 ([#92](https://github.com/rolehippie/owncloud/issues/92)) ([b6c0163](https://github.com/rolehippie/owncloud/commit/b6c0163c80b7cf0b51dc576807450dd2370d8f4c))
+* **mise:** update dependency prek to v0.5.7 ([#93](https://github.com/rolehippie/owncloud/issues/93)) ([b26766e](https://github.com/rolehippie/owncloud/commit/b26766eebda09ffb22a8bd966237bff85e93768f))
+
 ## [4.4.0](https://github.com/rolehippie/owncloud/compare/v4.3.1...v4.4.0) (2026-10-05)
 
 ### Dependencies
